@@ -74,7 +74,7 @@ S3ACCOUNT_TO_ID_MAPPING_FILE = YAMLFILES_PATH+'s3account_to_id_mapping.json'
 S3ACCOUNTTIERING_PATH = NFS_PATH+"s3accounttiering/"
 
 # Global variable to store when a new S3 account/tenant is detected
-NEW_ACCOUNTS
+NEW_ACCOUNTS = {}
 
 # Define the json files to store the s3accounts based on their tier
 S3ACCOUNTS_GOLD_TIER_FILE = S3ACCOUNTTIERING_PATH+'goldonly_s3accounts.json'
