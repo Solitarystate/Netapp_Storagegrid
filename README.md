@@ -33,12 +33,6 @@ Remember to pass the correct arguments for each of the functions
 ```python
 from sgpolicytags import PolicyTagAssigner
 
-# Define the tagging policy
-policy = {
-    "tag1": "condition1",
-    "tag2": "condition2"
-}
-
 # Create an instance of SGPolicyTags
 policytag_assigner = PolicyTagAssigner(sg=sg,exceptions=EXCEPTIONS,
                                        s3account_to_id_mapping_file=S3ACCOUNT_TO_ID_MAPPING_FILE,
@@ -68,7 +62,9 @@ policytag_assigner.get_bucket_consistency
 policytag_assigner.assign_policy_tag
 ```
 
-```
+An example of the contents neededs for generating the `s3account_to_id_map` dictionary that can be supplied to the PolicyTagAssigner class. This makes the operations in that class quicker and easier for both retrieving and assigning policy tags. 
+
+```python
 # Define the NFS paths
 NFS_PATH = "/root/storagegrid/"
 YAMLFILES_PATH = NFS_PATH+"yamlfiles/"
